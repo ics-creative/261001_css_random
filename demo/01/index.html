@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <title>1. いいねボタンのパーティクルのデモ</title>
+  <title>1. Like Button Particle Demo</title>
   <link href="../base.css" rel="stylesheet" />
   <style>
     .demo {
@@ -53,14 +53,14 @@
     }
 
     .particle {
-      /* 粒子の飛ぶ方向をランダムにします。 */
+      /* 粒子の飛ぶ方向をランダムにする */
       rotate: random(0turn, 1turn);
       transform-box: view-box;
       transform-origin: 250px 250px;
     }
 
     .particle circle {
-      /* 色相・彩度・明度をランダムにして、毎回違う配色にします。 */
+      /* 色相・彩度・明度をランダムにして、毎回違う配色にする */
       fill: hsl(
         random(145deg, 335deg)
         random(55%, 85%)
@@ -78,19 +78,13 @@
     }
 
     .is-playing .particle circle {
-      /* 飛距離・速度・開始タイミングを粒子ごとに変えます。 */
+      /* 飛距離・速度・開始タイミングを粒子ごとに変える */
       animation:
         particle
         random(1200ms, 1800ms)
         ease-out
         random(0ms, 160ms)
         forwards;
-    }
-
-    .caption {
-      margin: 6px 0 0;
-      color: #665cae;
-      font-size: 14px;
     }
 
     @keyframes particle {
@@ -188,12 +182,11 @@
           d="M250,187.4c-31.8-47.8-95.5-19.8-95.5,32.2c0,35.2,31.8,60.3,55.7,79.2c24.9,19.7,31.8,23.9,39.8,31.8c7.9-7.9,14.6-12.6,39.8-31.8c24.3-18.5,55.7-44.4,55.7-79.6C345.5,167.6,281.8,139.7,250,187.4z"
         />
       </svg>
-      <span class="button-label">もう一度再生</span>
+      <span class="button-label">Play Again</span>
     </button>
-    <p class="caption">方向・距離・速度・色を random() でばらつかせています。</p>
   </div>
 
-  <p class="unsupported">Safari 26.2以降で確認してください。<br>このデモはCSSのrandom()を使用しています。</p>
+  <p class="unsupported">View this demo in Safari 26.2 or later.<br>It uses CSS random().</p>
 </main>
 
 <script>
@@ -202,7 +195,7 @@
   const play = () => {
     likeButton.classList.remove("is-playing");
 
-    // アニメーションを再実行するため、クラスを付け直す前にスタイル計算を更新します。
+    // アニメーションを再実行するため、クラスを付け直す前にスタイル計算を更新する
     requestAnimationFrame(() => {
       likeButton.classList.add("is-playing");
     });

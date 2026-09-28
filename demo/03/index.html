@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <title>3. 文字ごとのランダムな時間差のデモ</title>
+  <title>3. Random Text Delay Demo</title>
   <link href="../base.css" rel="stylesheet" />
   <style>
     .panel {
@@ -36,25 +36,10 @@
     }
 
     .headline:hover .char {
-      /* 文字ごとに違う delay を割り当てます。 */
+      /* 文字ごとに違う delay を割り当てる */
       animation:
         flash 500ms ease
         random(0ms, 600ms);
-    }
-
-    .hint {
-      margin: 28px 0 0;
-      color: #827bb1;
-      font-size: 14px;
-    }
-
-    .code {
-      display: inline-block;
-      padding: 0.15em 0.45em;
-      color: #3223b3;
-      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-      background: #efedff;
-      border-radius: 0.45em;
     }
 
     @keyframes flash {
@@ -79,18 +64,12 @@
 <main class="panel">
   <div class="supported-content">
     <h1 class="headline">
-      <span class="line"><span class="char">I</span><span class="char">C</span><span class="char">S</span><span class="space">&nbsp;</span><span class="char">M</span><span class="char">E</span><span class="char">D</span><span class="char">I</span><span class="char">A</span><span class="char">で</span><span class="char">試</span><span class="char">す</span></span>
-      <span class="line"><span class="char">C</span><span class="char">S</span><span class="char">S</span><span class="space">&nbsp;</span><span class="char">r</span><span class="char">a</span><span class="char">n</span><span class="char">d</span><span class="char">o</span><span class="char">m</span><span class="char">(</span><span class="char">)</span><span class="char">の</span><span class="char">新</span><span class="char">し</span><span class="char">い</span><span class="char">表</span><span class="char">現</span></span>
+      <span class="line"><span class="char">I</span><span class="char">C</span><span class="char">S</span><span class="space">&nbsp;</span><span class="char">M</span><span class="char">E</span><span class="char">D</span><span class="char">I</span><span class="char">A</span></span>
+      <span class="line"><span class="char">C</span><span class="char">S</span><span class="char">S</span><span class="space">&nbsp;</span><span class="char">r</span><span class="char">a</span><span class="char">n</span><span class="char">d</span><span class="char">o</span><span class="char">m</span><span class="char">(</span><span class="char">)</span><span class="space">&nbsp;</span><span class="char">I</span><span class="char">d</span><span class="char">e</span><span class="char">a</span><span class="char">s</span></span>
     </h1>
-
-    <p class="hint">
-      テキストにhoverすると、文字ごとに <br>
-      <span class="code">animation-delay</span>
-      がランダムに変わります。
-    </p>
   </div>
 
-  <p class="unsupported">Safari 26.2以降で確認してください。<br>このデモはCSSのrandom()を使用しています。</p>
+  <p class="unsupported">View this demo in Safari 26.2 or later.<br>It uses CSS random().</p>
 </main>
 </body>
 </html>

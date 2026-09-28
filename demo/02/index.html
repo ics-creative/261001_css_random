@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <title>2. ランダムな星空のデモ</title>
+  <title>2. Random Starry Sky Demo</title>
   <link href="../base.css" rel="stylesheet" />
   <style>
     body {
@@ -46,15 +46,9 @@
       line-height: 1;
     }
 
-    .copy p {
-      margin: 18px 0 0;
-      color: rgb(255 255 255 / 68%);
-      font-size: clamp(13px, 2vw, 16px);
-    }
-
     .star {
       position: absolute;
-      /* 位置・大きさ・発光の強さを星ごとに変えます。 */
+      /* 位置・大きさ・発光の強さを星ごとに変える */
       top: random(3%, 96%);
       left: random(2%, 98%);
       width: random(2px, 7px);
@@ -159,11 +153,10 @@
     <div class="copy">
       <small>ICS MEDIA</small>
       <strong>CSS random()</strong>
-      <p>位置・大きさ・速度・開始タイミングをCSSだけでランダムに。</p>
     </div>
   </section>
 
-  <p class="unsupported">Safari 26.2以降で確認してください。<br>このデモはCSSのrandom()を使用しています。</p>
+  <p class="unsupported">View this demo in Safari 26.2 or later.<br>It uses CSS random().</p>
 </main>
 </body>
 </html>

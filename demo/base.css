@@ -34,7 +34,7 @@ button {
   border-radius: 16px;
 }
 
-/* random() 未対応の環境では、サンプルの代わりに案内文を表示します。 */
+/* random() 未対応の環境では、サンプルの代わりに案内文を表示する */
 @supports not (width: random(1px, 2px)) {
   .supported-content {
     display: none !important;

@@ -1,11 +1,11 @@
-# CSS random() のデモ
+# CSS random() Demos
 
-CSS の `random()` を使ったデモ集です。
+A small collection of demos using CSS `random()`.
 
-本記事のデモは、**Safari 26.2以上** でご覧ください。
+View these demos in **Safari 26.2 or later**.
 
-## デモ
+## Demos
 
-- [1. いいねボタンのパーティクル](./demo/01/)
-- [2. ランダムな星空](./demo/02/)
-- [3. 文字ごとのランダムな時間差](./demo/03/)
+- [1. Like Button Particles](./demo/01/)
+- [2. Random Starry Sky](./demo/02/)
+- [3. Random Text Delay](./demo/03/)
