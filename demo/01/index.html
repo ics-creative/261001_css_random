@@ -55,12 +55,17 @@
 
     .particle {
       /* 粒子の飛ぶ方向をランダムにする */
-      rotate: random(0turn, 1turn);
+      --particle-angle: random(0turn, 1turn);
+      transform: rotate(var(--particle-angle));
       transform-box: view-box;
       transform-origin: 250px 250px;
     }
 
     .particle circle {
+      --particle-distance: random(220px, 290px);
+      --particle-duration: random(1200ms, 1800ms);
+      --particle-delay: random(0ms, 160ms);
+
       /* 色相・彩度・明度をランダムにして、毎回違う配色にする */
       fill: hsl(
         random(145deg, 335deg)
@@ -82,9 +87,9 @@
       /* 飛距離・速度・開始タイミングを粒子ごとに変える */
       animation:
         particle
-        random(1200ms, 1800ms)
+        var(--particle-duration)
         ease-out
-        random(0ms, 160ms)
+        var(--particle-delay)
         forwards;
     }
 
@@ -102,7 +107,7 @@
 
       100% {
         opacity: 0;
-        transform: translateX(random(220px, 290px));
+        transform: translateX(var(--particle-distance));
       }
     }
 
@@ -193,8 +198,16 @@
 <script>
   const likeButton = document.querySelector(".like-button");
 
+  const resetParticles = () => {
+    // 粒子要素を作り直して、CSS random() の値を再評価させる
+    document.querySelectorAll(".particle").forEach((particle) => {
+      particle.replaceWith(particle.cloneNode(true));
+    });
+  };
+
   const play = () => {
     likeButton.classList.remove("is-playing");
+    resetParticles();
 
     // アニメーションを再実行するため、クラスを付け直す前にスタイル計算を更新する
     requestAnimationFrame(() => {
