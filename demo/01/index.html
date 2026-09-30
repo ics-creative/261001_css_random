@@ -23,19 +23,19 @@
       background: transparent;
       border: 0;
       -webkit-tap-highlight-color: transparent;
-    }
 
-    .like-button svg {
-      display: block;
-      width: 100%;
-      overflow: visible;
-    }
+      svg {
+        display: block;
+        width: 100%;
+        overflow: visible;
+      }
 
-    .button-label {
-      padding: 10px 16px;
-      color: #fff;
-      background: #3223b3;
-      border-radius: 999px;
+      .button-label {
+        padding: 10px 16px;
+        color: #fff;
+        background: #3223b3;
+        border-radius: 999px;
+      }
     }
 
     .explosion {
@@ -59,38 +59,42 @@
       transform: rotate(var(--particle-angle));
       transform-box: view-box;
       transform-origin: 250px 250px;
+
+      circle {
+        --particle-distance: random(220px, 290px);
+        --particle-duration: random(1200ms, 1800ms);
+        --particle-delay: random(0ms, 160ms);
+
+        /* 色相・彩度・明度をランダムにして、毎回違う配色にする */
+        fill: hsl(
+          random(145deg, 335deg)
+          random(55%, 85%)
+          random(68%, 82%)
+        );
+        opacity: 0;
+      }
     }
 
-    .particle circle {
-      --particle-distance: random(220px, 290px);
-      --particle-duration: random(1200ms, 1800ms);
-      --particle-delay: random(0ms, 160ms);
+    .is-playing {
+      .explosion {
+        animation: explosion 800ms forwards;
+      }
 
-      /* 色相・彩度・明度をランダムにして、毎回違う配色にする */
-      fill: hsl(
-        random(145deg, 335deg)
-        random(55%, 85%)
-        random(68%, 82%)
-      );
-      opacity: 0;
-    }
+      .heart {
+        animation: heart 800ms forwards;
+      }
 
-    .is-playing .explosion {
-      animation: explosion 800ms forwards;
-    }
-
-    .is-playing .heart {
-      animation: heart 800ms forwards;
-    }
-
-    .is-playing .particle circle {
-      /* 飛距離・速度・開始タイミングを粒子ごとに変える */
-      animation:
-        particle
-        var(--particle-duration)
-        ease-out
-        var(--particle-delay)
-        forwards;
+      .particle {
+        circle {
+          /* 飛距離・再生時間・開始タイミングを粒子ごとに変える */
+          animation:
+            particle
+            var(--particle-duration)
+            ease-out
+            var(--particle-delay)
+            forwards;
+        }
+      }
     }
 
     @keyframes particle {

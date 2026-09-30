@@ -21,26 +21,28 @@
       line-height: 1.17;
       text-align: center;
       cursor: pointer;
-    }
 
-    .line {
-      display: block;
-    }
+      .line {
+        display: block;
+      }
 
-    .char,
-    .space {
-      display: inline-block;
-    }
+      .char,
+      .space {
+        display: inline-block;
+      }
 
-    .char {
-      color: #3223b3;
-    }
+      .char {
+        color: #3223b3;
+      }
 
-    .headline:hover .char {
-      /* 文字ごとに違う delay を割り当てる */
-      animation:
-        flash 500ms ease
-        random(0ms, 600ms);
+      &:hover {
+        .char {
+          /* 文字ごとに違う delay を割り当てる */
+          animation:
+            flash 500ms ease
+            random(0ms, 600ms);
+        }
+      }
     }
 
     @keyframes flash {
