@@ -24,7 +24,6 @@ button {
 
 .unsupported {
   display: none;
-  width: min(100%, 520px);
   max-width: 520px;
   margin-inline: auto;
   padding: 24px;
