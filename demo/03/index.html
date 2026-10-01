@@ -54,13 +54,13 @@
         aspect-ratio: 1;
         background: #fff;
         border-radius: 50%;
-        box-shadow: 0 0 random(4px, 16px) rgb(184 176 255 / 90%);
-        opacity: 0.25;
+        box-shadow: 0 0 random(8px, 28px) rgb(184 176 255 / 95%);
+        opacity: 0.18;
         animation:
           twinkle
-          random(1.1s, 3.8s)
+          random(600ms, 1.8s)
           ease-in-out
-          random(-3.5s, 0s)
+          random(-1.8s, 0s)
           infinite alternate;
       }
     }
@@ -68,7 +68,7 @@
     @keyframes twinkle {
       to {
         opacity: 1;
-        transform: scale(1.45);
+        transform: scale(2.1);
       }
     }
   </style>
@@ -156,7 +156,7 @@
     </div>
   </section>
 
-  <p class="unsupported">View this demo in Safari 26.2 or later.<br>It uses CSS random().</p>
+  <p class="unsupported">View this demo in Chrome 156 or Safari 26.2 or later.<br>It uses CSS random().</p>
 </main>
 </body>
 </html>
