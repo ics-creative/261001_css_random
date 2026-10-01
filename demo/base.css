@@ -24,7 +24,9 @@ button {
 
 .unsupported {
   display: none;
+  width: min(100%, 520px);
   max-width: 520px;
+  margin-inline: auto;
   padding: 24px;
   color: #3223b3;
   line-height: 1.7;
