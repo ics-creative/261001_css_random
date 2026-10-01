@@ -2,7 +2,7 @@
 
 A small collection of demos using CSS `random()`.
 
-View these demos in **Chrome 156 or Safari 26.2 or later**.
+View these demos in **Safari 26.2 or later**.
 
 ## Demos
 
