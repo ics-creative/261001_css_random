@@ -84,7 +84,7 @@
 
       .particle {
         circle {
-          /* 飛距離・再生時間・開始タイミングを粒子ごとに変える */
+          /* 再生時間・開始タイミングを粒子ごとに変える */
           animation:
             particle
             var(--particle-duration)
@@ -109,6 +109,7 @@
 
       100% {
         opacity: 0;
+        /* 飛距離を粒子ごとに変える */
         transform: translateX(var(--particle-distance));
       }
     }
